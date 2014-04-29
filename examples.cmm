@@ -1,0 +1,48 @@
+var int n;
+
+def void inc(int x, int times){
+	assert(times > 0);
+	rep(times)
+		++x++--;
+}
+
+def int fib(int k){
+	if(k <= 0)
+		return 0;
+	endif;
+	if(k == 1)
+		return 1;
+	endif;
+	//Rekurencja.
+	return fib(k-1) + fib(k-1);
+}
+
+
+def bool isAnyTrue(bool [] a){
+	//Wbudowana instrukcja contains.
+	return contains(a, true);
+}
+
+def void main(){
+	var int x = 4;
+
+	//Wolanie przez referencje.	
+	inc(&x);
+	print(x);
+	
+	{
+		//Zagniezdzona definicja funkcji (przeslanianie).
+		def void inc(int v){
+			return;
+		}
+		inc(&x);
+		print(x);
+		
+
+	}
+
+	{
+		var int x = 99;
+	}
+	print(x);
+}

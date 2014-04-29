@@ -1,0 +1,87 @@
+comment "//" ;
+comment "/*" "*/" ;
+  
+Prog. Program  ::= [Decl] [Function];
+Fun. Function ::= "def" Type Ident "(" [Par] ")" Block ;
+Block. Block ::= "{" [Decl] [Function] [Stm] "}" ;
+
+terminator   Function "" ;
+
+DVar.		Decl ::= "var" Type Ident ;
+DVarInit.	Decl ::= "var" Type Ident "=" Exp ;
+DArray.		Decl ::= "tab" Type Ident "[" Integer "]" ;
+
+terminator Decl ";" ;
+
+PVar.        Par ::= Type Ident ;
+PArr.        Par ::= Type "[]" Ident ;
+
+separator Par "," ;
+
+AVal.        Arg  ::= Exp ;
+ARef.        Arg  ::= "&" Ident;
+
+separator    Arg "," ;
+
+SNull.		Stm ::= ";" ;
+SExp.		Stm ::= Exp ";" ;
+SBlock.		Stm ::= Block ;
+SIf.		Stm ::= "if" "(" Exp ")" Stm "endif" ";" ;
+SIfElse.	Stm ::= "if" "(" Exp ")" Stm "else" Stm "endif" ";" ;
+SWhile.		Stm ::= "while" "(" Exp ")" Stm ;
+SDoWhile.	Stm ::= "do" Stm "while" "(" Exp ")" ";" ;
+SFor.		Stm ::= "for" "(" Decl ";" Exp ";" Exp ")" Stm ;
+SRepeat.	Stm ::= "rep" "(" Exp ")" Stm ; 
+SBreak.		Stm ::= "break" ";" ;
+SContinue.	Stm ::= "continue" ";" ;
+SRetNull.	Stm ::= "return" ";" ;
+SRetVal.	Stm ::= "return" Exp ";" ;
+SPrint.		Stm ::= "print" "(" Exp ")" ";" ;
+SAssert.	Stm ::= "assert" "(" Exp ")" ";" ;
+
+terminator Stm "";
+
+EAssVar.	Exp ::= Ident AssOp Exp ;
+EAssArr.	Exp ::= Ident "[" Exp "]" AssOp Exp ;
+EOr.		Exp1  ::= Exp1  "||" Exp2 ;
+EAnd.		Exp2 ::= Exp2 "&&" Exp3 ;
+EEq.		Exp3 ::= Exp3 "==" Exp4 ;
+ENeq.		Exp3 ::= Exp3 "!=" Exp4 ;
+ELt.		Exp4 ::= Exp4 "<"  Exp5 ;
+EGt.		Exp4 ::= Exp4 ">"  Exp5 ;
+ELeq.		Exp4 ::= Exp4 "<=" Exp5 ;
+EGeq.		Exp4 ::= Exp4 ">=" Exp5 ;
+EAdd.		Exp5 ::= Exp5 "+" Exp6 ;
+ESub.		Exp5 ::= Exp5 "-" Exp6 ;
+EMul.		Exp6 ::= Exp6 "*" Exp7 ;
+EDiv.		Exp6 ::= Exp6 "/" Exp7 ;
+EMod.		Exp6 ::= Exp6 "%" Exp7 ;
+EPreInc.	Exp7 ::= "++" Exp7 ;
+EPreDec.	Exp7 ::= "--" Exp7 ;
+ENot.		Exp7 ::= "!" Exp7;
+ENeg.		Exp7 ::= "-" Exp8;
+ECall.		Exp8 ::= Ident "(" [Arg] ")";
+EPostInc.	Exp8 ::= Exp8 "++" ;
+EPostDec.	Exp8 ::= Exp8 "--" ;
+EArray.		Exp8 ::= Ident "[" Exp "]" ;
+EGet.		Exp8 ::= "getInt" "(" ")" ;
+EContains.	Exp8 ::= "contains" "(" Ident "," Exp ")" ;
+EVar.		Exp9 ::= Ident ;
+ETrue.		Exp9 ::= "true" ;
+EFalse.		Exp9 ::= "false" ;
+EInt.		Exp9 ::= Integer ;
+
+coercions Exp 14 ;
+
+Assign.		AssOp ::= "=" ;
+AssignMul.	AssOp ::= "*=" ;
+AssignDiv.	AssOp ::= "/=" ;
+AssignMod.	AssOp ::= "%=" ;
+AssignAdd.	AssOp ::= "+=" ;
+AssignSub.	AssOp ::= "-=" ;
+
+TInt.	Type ::= "int" ;
+TBool.	Type ::= "bool" ;
+TVoid.	Type ::= "void" ;
+
+

@@ -1,0 +1,8 @@
+def void main(){
+	rep(3){
+		print(1);
+	}
+	rep(-5){
+		print(100);
+	}
+}

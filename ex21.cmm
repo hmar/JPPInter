@@ -1,0 +1,11 @@
+def int plusdwa(int x){
+        x += 2;
+	return x;
+}
+
+
+def void main(){
+	var int x = 5; 
+	print(plusdwa(&x));
+	print(x);
+}

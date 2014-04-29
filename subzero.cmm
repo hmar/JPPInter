@@ -1,0 +1,10 @@
+def void main(){
+	var int c;
+	var int x = -1;
+	var int y = 1 - 2;
+	var int z = -x;
+	tab int t[10];
+	z = -x;
+	t[-1] = 5;
+	---x;
+}

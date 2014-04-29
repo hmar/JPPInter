@@ -1,0 +1,16 @@
+def int dwa(){
+	return 2;
+}
+
+def void nic(){
+	return;
+}
+
+def void main(){
+	var int x = dwa(); 
+	def int dwa(){return 3;};
+	print(x);
+	print(dwa());
+	nic();
+	print(nic());
+}

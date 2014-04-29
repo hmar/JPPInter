@@ -1,0 +1,9 @@
+def void main(){
+	var int x = 0; 
+	rep(2){
+		x++;
+		rep(3){
+			print(x);
+		}
+	}
+}

@@ -1,0 +1,20 @@
+def void main(){
+        var bool x;
+        var bool y = true;
+        print(x);
+        print(y);
+        if(x && y)
+		print(1);
+	endif;
+	if(x || y)
+		print(2);
+	endif;
+	if(!x)
+		print(3);
+	endif;
+	if(!x && y){
+		y = false;
+		print(y);
+	}
+	endif;
+}

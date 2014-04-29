@@ -1,0 +1,17 @@
+def void main(){
+        var bool y = true;
+	if(y){
+		print(1);
+	}
+	else
+		print(2);  
+	endif;
+	y = false;
+	if(y){
+		print(1);
+	}
+	else
+		print(2);  
+	endif;
+
+}

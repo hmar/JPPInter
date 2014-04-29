@@ -1,0 +1,16 @@
+	Język CMinus jest wzorowany na języku C, z delikatnie zawoalowanymi elementami Pascala. Nie będę zatem zbyt szczegółowo opisywał wszystkich konstrukcji, skupię się tylko na odmiennościach od C. W trakcie tworzenia gramatyki CMinus opierałem się na następujących źródłach:
+	- https://github.com/BNFC/bnfc/blob/master/examples/C.cf
+	- http://bnfc.digitalgrammars.com/tutorial.html,
+z których pierwsze było zdecydowanie zbyt obszerne, zaś drugie zbyt ubogie, przez co zmuszony bylem szukać kompromisu.
+
+	Język pozwala deklarować zmienne, tablice i funkcje. Dostępne typy to int, bool i void. Różnicą w stosunku do C jest wymagany nagłówek przy każdej deklaracji. Dla zmiennej jest to var (np. var int x = 5;), dla tablicy - tab, a dla funkcji - def.
+	Program napisany w CMinus składa sie z ciągu deklaracji zmiennych i tablic, po których następują deklaracje funkcji. Planowane jest, aby przy interpretacji uruchamiana była funkcja typu void o nazwie main. Argumenty są przekazywane do funkcji na dwa sposoby - przez wartość (np. fun(x+12)) lub przez referencję (fun(&x)). 
+	Zbiór dostępnych operacji obejmuje większą część operacji C, z wyjątkiem oeratorów bitowych i innych, nielicznych, jak np. operator ",". Dostępne są natomiast operatory arytmrtyczne i logiczne, operatory --, ++ (w wersji pre i post), operatory przypisania z C (+=,/=,...) oraz wbudowane polecenia getInt (pobierające liczbę z wejścia) i contains (sprawdzające, czy podana tablica intów zawiera wartość równą wartości podanego wyrażenia). Planowana jest statyczna kontrola typów, silniejsza niż w C.
+	Dostępne są również standardowe polecenia C: for, do while, while, if, if else, break, continue, return (w wersji bez i z argumentem) oraz instrukcja bloku.
+	Na uwagę zasługują if-y. Otóż kończą się one wyrażeniem zamykającym "endif". Ponadto ciekawy jest blok, który składa się z ciągu deklaracji zmiennych i tablic, ciągu deklaracji funkcji oraz ciągu instrukcji. W zamyśle pozwala to na zagnieżdżone definicje funkcji oraz przesłanianie procedur i zmiennych. Co więcej, można korzystać również z następujących instrukcji:
+	- print - wypisującej na wyjście wartość wyrażenia podanego jako argument,
+	- rep - będącej uproszczoną wersją pętli for, wykonującej zadaną liczbę razy podane instrukcje
+	- assert - pozwalającej na sprawdzanie warunków w trakcie działania programu. 
+
+	Planowana jest, oprócz statycznej kontroli typów, również dynamiczna kontrola w czasie wykonania. 
+	

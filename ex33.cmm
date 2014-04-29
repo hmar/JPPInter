@@ -1,0 +1,4 @@
+var int x = 9;
+var bool y = !x;
+
+def void main(){}

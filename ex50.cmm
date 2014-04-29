@@ -1,0 +1,19 @@
+tab int t[10];
+tab bool b[10];
+
+
+def int fun(int [] x){
+    return x[3];
+}
+
+def void main(){
+	for(var int i = 0; i < 10; i++){
+		t[i] = 2*i;
+		print(t[i]*3);
+	}
+        print(t[0] += 100);
+        print(t[0]);
+
+	print(fun(&t));
+}
+

@@ -1,0 +1,5 @@
+var int x = 5;
+
+def void main(){
+	print(2+3-x);
+}

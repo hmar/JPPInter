@@ -1,0 +1,5 @@
+#!/bin/bash
+bnfc -m -haskell CMinus.cf
+make
+texi2pdf DocCMinus.tex
+ghc --make Interpret.hs

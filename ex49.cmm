@@ -1,0 +1,14 @@
+tab int t[10];
+tab bool b[10];
+
+def void main(){
+//	print(t[1]);
+//	print(t[0]);
+//	print(t[10]);
+//	print(t[-10]);
+//	print(b[1]);
+	print(b[0]);
+//	print(b[10]);
+//	print(b[-10]);
+}
+

@@ -1,0 +1,9 @@
+def void main(){
+        var int x;
+        print(x);
+        print(++x);
+        print(--x);
+        print(x++);
+        print(x--);
+        print(x);
+}

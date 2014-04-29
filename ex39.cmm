@@ -1,0 +1,11 @@
+var int x = 1;
+var bool b = true;
+
+var int y = x+=3;
+//var int z = b *= 1;
+var int w = x -= true;
+
+
+def void main(){}
+
+

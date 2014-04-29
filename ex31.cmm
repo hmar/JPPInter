@@ -1,0 +1,5 @@
+var int x = true;
+
+def void main(){
+	var bool x = 5;
+}

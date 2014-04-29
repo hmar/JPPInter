@@ -1,0 +1,15 @@
+var int x = 5;
+
+def void doublePrint(){
+    print(x);
+    print(x);
+
+}
+
+def void main(){
+        var int x = 15;
+        doublePrint();
+	print(2+3-x);
+
+
+}

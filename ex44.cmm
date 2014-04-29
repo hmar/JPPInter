@@ -1,0 +1,17 @@
+def int f(bool x, int y){
+	var bool z = x || (2 * y > y);
+	return 2*y;
+}
+
+def void main(){
+	//def void f(int x){
+	//	return 10 / x;
+	//}
+
+	def int f(int x){
+		return 10 / x;
+	}
+
+	//print(f(1));
+	print(f(0));
+}

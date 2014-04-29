@@ -1,0 +1,21 @@
+var int x = 0;
+var bool y = false;
+
+def void f(int w, int x, bool y, bool z){}
+
+def void main(){
+	f(1,2,true, false);
+	f(2*x+5,2,true, false);
+	f(1,2,true||y, false);
+	f(&x,2,true, false);
+	f(1,2,&y, false);
+//	f(true,2,true, false);
+//	f(1,2,1, false);
+//	f(z,2,true, false);
+//	f(&y,2,true, false);
+//	f(1,2,&x, false);
+//	f(1,2,1+2, false);
+//	f(true && y,2,true, false);
+
+
+}

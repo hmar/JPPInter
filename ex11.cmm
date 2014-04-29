@@ -1,0 +1,8 @@
+def void main(){
+        var int x;
+        print(x);
+	{
+		var int x = 15;
+		print(x);
+	}
+}

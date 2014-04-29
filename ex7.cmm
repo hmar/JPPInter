@@ -1,0 +1,16 @@
+var int x = 5;
+
+def void doublePrint(){
+    print(x);
+    print(x);
+
+}
+
+def void main(){
+        var int x = 15;
+        doublePrint();
+        x = getInt();
+        print(x);
+        print(x += 3);
+        print(x *= 2);
+}

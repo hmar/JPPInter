@@ -1,0 +1,19 @@
+def int f(){
+	return 1;
+}
+
+def void h(){}
+
+//def int g(){
+//	return;
+//}
+
+//def void i(){
+//	return 1;
+//}
+
+def void main(){
+
+	print(true);
+}
+

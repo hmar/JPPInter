@@ -1,0 +1,7 @@
+var int x = 5;
+
+def int f(bool x){
+	var int y = x;
+}
+
+def void main(){}

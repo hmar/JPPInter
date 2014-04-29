@@ -1,0 +1,11 @@
+def int rectangleArea(int width, int length){
+	return width * length;
+}
+
+def void main(){
+	var int w = 5;
+	var int l = 4;
+	// print(rectangleArea(w));
+	print(rectangleArea(w,l,l));
+
+}
